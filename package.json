@@ -1,0 +1,12 @@
+{
+  "name": "hyperframes-student-studio",
+  "private": true,
+  "description": "HyperFrames student studio: style cards, style skills, kits and a beginner setup for Claude Code",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "hyperframes": "^0.8.79"
+  }
+}
