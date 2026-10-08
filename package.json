@@ -7,6 +7,6 @@
     "node": ">=22"
   },
   "devDependencies": {
-    "hyperframes": "^0.8.79"
+    "hyperframes": "~0.8.140"
   }
 }

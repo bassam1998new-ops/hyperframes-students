@@ -68,13 +68,22 @@ Say what each one does and roughly how big it is, then run them in order:
    Node.js, FFmpeg, FFprobe and Chrome must be ✓. These are **optional — ignore them**: a newer
    version available, whisper-cpp (automatic captions), MusicGen (AI music), Docker.
 
+After `npx hyperframes skills`: new skills load in a new session. Tell them: "Close Claude Code and
+open it again in this folder, then type `/setup` — I'll pick up at the test video."
+
 ## 4. Prove it works: a 3-second test video
+Needs internet (the animation library loads from the web). Run these one per line (in PowerShell,
+`&&` does not work):
 ```bash
-mkdir -p my-videos && cd my-videos
+mkdir my-videos
+cd my-videos
 npx hyperframes init hello-test --example blank --resolution portrait --non-interactive
 cd hello-test
 ```
-Put one big word on screen (their name, or "Hello") that fades in, keep it 3 seconds, then:
+The blank example is 10 seconds and says "Title". In `index.html`: change the text to their name or
+"Hello", set **both** `data-duration="10"` to `3`, add a fade-in
+(`tl.fromTo("#title", { opacity: 0 }, { opacity: 1, duration: 0.6 }, 0);`) and `tl.set({}, {}, 3);`
+before the `window.__timelines` line. Then:
 ```bash
 npx hyperframes lint
 npx hyperframes render --quality draft
@@ -86,4 +95,8 @@ If it fails, read the error, fix it, and try again. Don't hand them a broken ste
 Tell them, short:
 - "Setup is done. Your videos will live in the `my-videos` folder."
 - "To make a video, type `/new-video`."
-- "Next time: open Claude Code in this same folder." Tell them the folder path you used.
+- "Next time, open Claude Code in this same folder." Tell them the full folder path you used, and how:
+  - **Claude desktop app:** Code tab → choose / open folder → pick that folder.
+  - **Terminal:** `cd "<the full path>"` then `claude`.
+- On Windows, "Documents" may really be inside OneDrive (`OneDrive\Documents`). Check where the
+  clone actually landed and give that exact path.

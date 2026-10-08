@@ -31,10 +31,11 @@ touches your work.
 | `CLAUDE.md`, `.claude/skills/setup/`, `.claude/skills/new-video/` | **Beginner starter**: tells Claude Code to talk simply, check your computer, ask before installing, and walk you through a video. |
 | `video-projects/_library/styles/<slug>/style.md` | **Style cards.** One whole look each: tone, palette roles, type, camera, edit rhythm, motion JSON (eases, durations, staggers), sound, calm/punchy modes, AI prompt parts, do/don't. |
 | `video-projects/_library/styles/_template/` | A blank style card + a blank style skill, to write your own. |
-| `video-projects/_library/styles/neon-node-explainer/frames/` | Style frames for the node-explainer look (rendered from the demo blocks). Other cards list their frames, but those images are not published yet. |
+| `video-projects/_library/styles/<slug>/frames/` | Style frames (example images) for the looks that have them: node-explainer and hatch-cosmos. Other cards list their frames, but those images are not published yet. |
 | `.claude/skills/style-<slug>/SKILL.md` | **Style skills** for Claude Code: how to build a video in that look, step by step, with the checks before you show it. |
 | `video-projects/_library/assets/kits/node-explainer/` | **The node-explainer kit**: `nx.css` (role tokens + parts) and `nx.js` (global `NX`: themes, icons, connectors, seek-safe tween helpers). Its README lists every part and helper. |
-| `video-projects/_library/compositions/` | Two demo blocks built with the kit: `node-explainer-16x9.html` (1920×1080) and `portrait/node-explainer-9x16.html` (1080×1920). |
+| `video-projects/_library/assets/kits/hatch/` | **The hatch kit** (hand-drawn hatched mascots) used by the hatch-cosmos look. |
+| `video-projects/_library/compositions/` | Demo blocks: `node-explainer-16x9.html`, `hatch-cosmos-16x9.html` (1920×1080) and `portrait/node-explainer-9x16.html`, `portrait/hatch-cosmos-9x16.html` (1080×1920). |
 
 ## Colours are brand roles, not hex
 

@@ -27,6 +27,10 @@ video, checks it and shows it. For the HyperFrames rules themselves (composition
 
 - Every video lives in its own folder: `my-videos/<short-name>/`. Run HyperFrames commands from
   inside that folder.
+- `npx hyperframes init` puts its own `CLAUDE.md` and `package.json` in each video folder (with
+  `npm run dev` / `check` / `render`, and other workflow skills). Those are fine to use, but for this
+  student keep the simple `/new-video` flow and the commands below. `npm run dev` = preview.
+- Rendering needs internet the first time (the animation library loads from the web).
 - Preview: `npx hyperframes preview` — opens the Studio in the browser.
 - Before every render: `npx hyperframes lint`.
 - Draft render: `npx hyperframes render --quality draft`. Final: `npx hyperframes render --quality standard`.
